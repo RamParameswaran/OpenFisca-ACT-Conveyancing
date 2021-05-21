@@ -1,0 +1,100 @@
+minimum_threshold:
+  description: Minimal threshold for residential conveyance duty
+  metadata:
+    unit: currency-AUD
+  values:
+    2017-06-07: 0
+
+
+minimum_duty:
+  description: Minimal amount for residential conveyance duty
+  metadata:
+    unit: currency-AUD
+  values:
+    2017-06-07: 20
+
+
+rate:
+  description: Residential conveyance duty schedule
+  metadata:
+    threshold_unit: currency-AUD
+
+  brackets:
+  - threshold:
+      2017-06-07:
+        value: 0
+    rate:
+      2017-06-07:
+        value: 0.014
+      2018-06-07:
+        value: 0.013
+      2019-07-01:
+        value: 0.012
+    
+
+  - threshold:
+      2017-06-07:
+        value: 200000
+    rate:
+      2017-06-07:
+        value: 0.024
+      2018-06-07:
+        value: 0.023
+      2019-07-01:
+        value: 0.022
+    
+
+  - threshold:
+      2017-06-07:
+        value: 300000
+    rate:
+      2017-06-07:
+        value: 0.038
+      2018-06-07:
+        value: 0.036
+      2019-07-01:
+        value: 0.034
+    
+  - threshold:
+      2017-06-07:
+        value: 500000
+    rate:
+      2017-06-07:
+        value: 0.0478
+      2018-06-07:
+        value: 0.0456
+      2019-07-01:
+        value: 0.0432
+
+  - threshold:
+      2017-06-07:
+        value: 750000
+    rate:
+      2017-06-07:
+        value: 0.0630
+      2018-06-07:
+        value: 0.0610
+      2019-07-01:
+        value: 0.0590
+
+  - threshold:
+      2017-06-07:
+        value: 1000000
+    rate:
+      2017-06-07:
+        value: 0.0680
+      2018-06-07:
+        value: 0.0660
+      2019-07-01:
+        value: 0.0640
+
+  - threshold:
+      2017-06-07:
+        value: 1455000
+    rate:
+      2017-06-07:
+        value: 0.0491
+      2018-06-07:
+        value: 0.0473
+      2019-07-01:
+        value: 0.0454

@@ -1,0 +1,84 @@
+minimum_threshold:
+  description: Minimal threshold for commercial conveyance duty
+  metadata:
+    unit: currency-AUD
+  values:
+    2017-06-07: 0
+    2018-06-07: 1500001
+
+minimum_duty:
+  description: Minimal amount for commercial conveyance duty
+  metadata:
+    unit: currency-AUD
+  values:
+    2017-06-07: 20
+    2018-06-07: 0
+
+rate:
+  description: Commercial conveyance duty schedule
+  metadata:
+    threshold_unit: currency-AUD
+
+  brackets:
+  - threshold:
+      2017-06-07:
+        value: 0
+    rate:
+      2017-06-07:
+        value: 0.007
+      2018-06-07:
+        value: 0.05
+    
+  - threshold:
+      2017-06-07:
+        value: 200000
+    rate:
+      2017-06-07:
+        value: 0.012
+      2018-06-07:
+        value: 0.05
+    
+  - threshold:
+      2017-06-07:
+        value: 300000
+    rate:
+      2017-06-07:
+        value: 0.019
+      2018-06-07:
+        value: 0.05
+    
+  - threshold:
+      2017-06-07:
+        value: 500000
+    rate:
+      2017-06-07:
+        value: 0.0239
+      2018-06-07:
+        value: 0.05
+
+  - threshold:
+      2017-06-07:
+        value: 750000
+    rate:
+      2017-06-07:
+        value: 0.0315
+      2018-06-07:
+        value: 0.05
+
+  - threshold:
+      2017-06-07:
+        value: 1000000
+    rate:
+      2017-06-07:
+        value: 0.0340
+      2018-06-07:
+        value: 0.05
+
+  - threshold:
+      2017-06-07:
+        value: 1455000
+    rate:
+      2017-06-07:
+        value: 0.05
+      2018-06-07:
+        value: 0.05
