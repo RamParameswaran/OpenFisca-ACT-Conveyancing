@@ -1,0 +1,15 @@
+- name: Household passes income test (before 2019-07-01)
+  period: 2018-01-01
+  input:
+    household_income: [160000, 160000, 163330, 163330, 166660, 166660, 169990, 169990, 173320, 173320, 176650, 176650, 176650, 176650]
+    number_dependent_children: [0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6]
+  output:
+    household_income_requirement_satisfied: [True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+
+- name: Household fails income test by $1 income (before 2019-07-01)
+  period: 2018-01-01
+  input:
+    household_income: [160001, 160001, 163331, 163331, 166661, 166661, 169991, 169991, 173321, 173321, 176651, 176651, 176651, 176651]
+    number_dependent_children: [0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6]
+  output:
+    household_income_requirement_satisfied: [False, False, False, False, False, False, False, False, False, False, False, False, False, False]

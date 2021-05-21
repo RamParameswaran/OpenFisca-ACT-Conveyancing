@@ -1,0 +1,47 @@
+description: To be eligible for the HBCS, the total gross income of all home buyers must be less than or equal to the relevant total gross income threshold
+metadata:
+  unit: currency-AUD
+  type: single_amount
+  threshold_unit: number_of_children
+brackets:
+  - threshold:
+      2017-06-07:
+        value: 0
+    amount:
+      2017-06-07:
+        value: 160000
+
+  - threshold:
+      2017-06-07:
+        value: 1
+    amount:
+      2017-06-07:
+        value: 163330
+
+  - threshold:
+      2017-06-07:
+        value: 2
+    amount:
+      2017-06-07:
+        value: 166660
+
+  - threshold:
+      2017-06-07:
+        value: 3
+    amount:
+      2017-06-07:
+        value: 169990
+
+  - threshold:
+      2017-06-07:
+        value: 4
+    amount:
+      2017-06-07:
+        value: 173320
+
+  - threshold:
+      2017-06-07:
+        value: 5
+    amount:
+      2017-06-07:
+        value: 176650

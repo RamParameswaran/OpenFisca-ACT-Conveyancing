@@ -1,0 +1,21 @@
+- name: Test eligibility criteria for HBCS
+  period: 2018-01-01
+  input:
+    property_type: [new_home, established, new_home, new_home, new_home, new_home]
+    all_buyers_are_18_years_old: [True, True, null, True, True, True]
+    residence_requirements_satisfied: [True, True, True, null, True, True]
+    property_requirements_satisfied: [True, True, True, True, null, True]
+    household_income_requirement_satisfied: [True, True, True, True, True, null]
+  output:
+    eligible_for_home_buyer_concession: [True, False, False, False, False, False ]
+
+- name: Test eligibility criteria for HBCS (without `property_type` restriction)
+  period: 2019-07-01
+  input:
+    property_type: [new_home, established, new_home, new_home, new_home, new_home]
+    all_buyers_are_18_years_old: [True, True, null, True, True, True]
+    residence_requirements_satisfied: [True, True, True, null, True, True]
+    property_requirements_satisfied: [True, True, True, True, null, True]
+    household_income_requirement_satisfied: [True, True, True, True, True, null]
+  output:
+    eligible_for_home_buyer_concession: [True, True, False, False, False, False ]
