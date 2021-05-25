@@ -4,7 +4,7 @@ from openfisca_core.periods import DAY
 from openfisca_core.variables import Variable
 
 # Import the Entities specifically defined for this tax and benefit system
-from openfisca_country_template.entities import Household
+from openfisca_act_conveyancing.entities import Household
 
 
 
