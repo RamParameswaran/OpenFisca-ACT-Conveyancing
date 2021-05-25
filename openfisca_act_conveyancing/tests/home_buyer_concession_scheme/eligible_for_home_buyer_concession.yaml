@@ -9,7 +9,7 @@
   output:
     eligible_for_home_buyer_concession: [True, False, False, False, False, False ]
 
-- name: Test eligibility criteria for HBCS (without `property_type` restriction)
+- name: Test eligibility criteria for HBCS after 2019-07-01 (`established` homes now permitted)
   period: 2019-07-01
   input:
     property_type: [new_home, established, new_home, new_home, new_home, new_home]

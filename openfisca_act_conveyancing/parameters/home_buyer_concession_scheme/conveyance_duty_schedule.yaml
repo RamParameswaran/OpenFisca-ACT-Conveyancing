@@ -1,0 +1,156 @@
+new_home:
+  description: Conveyance duty payable under HBCS for newly built home
+  metadata:
+    threshold_unit: currency-AUD
+
+  brackets:
+  - threshold:
+      2017-06-07:
+        value: 0
+    rate:
+      2017-06-07:
+        value: 0
+      2019-07-01:
+        value: 0
+    
+  - threshold:
+      2017-06-07:
+        value: 470000
+    rate:
+      2017-06-07:
+        value: 0.1305
+      2017-09-18:
+        value: 0.1305
+      2018-06-06:
+        value: 0.1235
+      2019-07-01:
+        value: 0
+
+  # Standard Rates apply from here
+  - threshold:
+      2017-06-07:
+        value: 607000
+    rate:
+      2017-06-07:
+        value: 0.0478
+      2018-06-07:
+        value: 0.0456
+      2019-07-01:
+        value: 0
+
+  - threshold:
+      2017-06-07:
+        value: 750000
+    rate:
+      2017-06-07:
+        value: 0.0630
+      2018-06-07:
+        value: 0.0610
+      2019-07-01:
+        value: 0
+
+  - threshold:
+      2017-06-07:
+        value: 1000000
+    rate:
+      2017-06-07:
+        value: 0.0680
+      2018-06-07:
+        value: 0.0660
+      2019-07-01:
+        value: 0
+
+  - threshold:
+      2017-06-07:
+        value: 1455000
+    rate:
+      2017-06-07:
+        value: 0.0491
+      2018-06-07:
+        value: 0.0473
+      2019-07-01:
+        value: 0
+
+vacant_land:
+  description: Conveyance duty payable under HBCS for newly built home
+  metadata:
+    threshold_unit: currency-AUD
+
+  brackets:
+  - threshold:
+      2017-06-07:
+        value: 0
+    rate:
+      2017-06-07:
+        value: 0
+      2019-07-01:
+        value: 0
+    
+  - threshold:
+      2017-06-07:
+        value: 281200
+    rate:
+      2017-06-07:
+        value: 0.1305
+      2017-09-18:
+        value: 0.1305
+      2018-06-06:
+        value: 0.1230
+      2019-07-01:
+        value: 0
+
+  # Standard Rates apply from here
+  - threshold:
+      2017-06-07:
+        value: 329500
+    rate:
+      2017-06-07:
+        value: 0.038
+      2018-06-07:
+        value: 0.036
+      2019-07-01:
+        value: 0
+
+  - threshold:
+      2017-06-07:
+        value: 500000
+    rate:
+      2017-06-07:
+        value: 0.0478
+      2018-06-07:
+        value: 0.0456
+      2019-07-01:
+        value: 0
+
+  - threshold:
+      2017-06-07:
+        value: 750000
+    rate:
+      2017-06-07:
+        value: 0.0630
+      2018-06-07:
+        value: 0.0610
+      2019-07-01:
+        value: 0
+
+  - threshold:
+      2017-06-07:
+        value: 1000000
+    rate:
+      2017-06-07:
+        value: 0.0680
+      2018-06-07:
+        value: 0.0660
+      2019-07-01:
+        value: 0
+
+  - threshold:
+      2017-06-07:
+        value: 1455000
+    rate:
+      2017-06-07:
+        value: 0.0491
+      2018-06-07:
+        value: 0.0473
+      2019-07-01:
+        value: 0

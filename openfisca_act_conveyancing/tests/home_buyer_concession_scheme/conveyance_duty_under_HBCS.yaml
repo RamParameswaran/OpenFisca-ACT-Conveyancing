@@ -1,0 +1,25 @@
+- name: Conveyance payable for NEW HOME under the HBCS between 2017-06-07 and 2018-06-05
+  relative_error_margin: 0.005
+  period: 2017-06-07
+  input:
+    property_type: [new_home, new_home, new_home, new_home, new_home, new_home, new_home]
+    property_price: [200000, 470000, 607000, 750000, 1000000, 1500000, 2000000]
+  output:
+    conveyance_duty_under_HBCS: [0, 0, 17878.5, 24750, 40500, 73650, 98200]
+
+- name: Conveyance payable for VACANT LAND under the HBCS between 2017-06-07 and 2018-06-05
+  relative_error_margin: 0.005
+  period: 2017-06-07
+  input:
+    property_type: [vacant_land, vacant_land, vacant_land, vacant_land, vacant_land, vacant_land, vacant_land, vacant_land]
+    property_price: [200000, 281200, 329500, 607000, 750000, 1000000, 1500000, 2000000]
+  output:
+    conveyance_duty_under_HBCS: [0, 0, 6303.15, 17878.5, 24750, 40500, 73650, 98200]
+
+- name: Conveyance payable under the HBCS after 2019-07-01
+  relative_error_margin: 0.005
+  period: 2019-07-01
+  input:
+    property_price: [200000, 470000, 607000, 750000, 1000000, 1500000, 2000000]
+  output:
+    conveyance_duty_under_HBCS: [0, 0, 0, 0, 0, 0, 0]
