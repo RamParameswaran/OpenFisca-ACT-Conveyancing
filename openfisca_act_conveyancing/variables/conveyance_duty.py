@@ -48,39 +48,37 @@ class conveyance_duty(Variable):
     default_value = 0
     unit = "currency-AUD"
 
-    def formula_2017_06_07(household, period, parameters):
+    def formula(household, period, parameters):
         """
         Conveyance Duty.
 
         Conveyance duty, commonly known as stamp duty, is a tax you pay when you buy property in the ACT, whether it’s a home, land, or a commercial property.
         The amount of duty you pay depends on the property’s purchase price or market value.
         """
-
-        is_residential_or_rural = (household("land_use_type", period) == LandUseType.rural) + (household("land_use_type", period) == LandUseType.residential)
-        is_commercial = (household("land_use_type", period) == LandUseType.commercial)
-
+        # We just need two inputs from the user: `land_type` and `property_price` (...and date)
+        land_type = household("land_use_type", period)
         property_price = household("property_price", period)
 
-        ### Commercial properties
-        # Calculate the duty for commercial property
+
+        # Group `land_type` into "is_residential_or_rural" and "is_commercial"
+        is_residential_or_rural = (land_type == LandUseType.rural) + (land_type == LandUseType.residential)
+        is_commercial = (land_type == LandUseType.commercial)
+
+        ### Calculate the duty for commercial properties
         conveyance_commercial = numpy.where(
             property_price >= parameters(period).conveyance_duty_schedule.commercial.minimum_threshold,
             parameters(period).conveyance_duty_schedule.commercial.rate.calc(property_price),
             0,
         )
-        # Now apply the minimum duty (if applicable)
-        conveyance_commercial = numpy.maximum(conveyance_commercial, parameters(period).conveyance_duty_schedule.commercial.minimum_duty)
 
-        ### Residential properties
-        # Calculate the duty for residential property
+        ### Calculate the duty for residential properties
         conveyance_residential = numpy.where(
             property_price >= parameters(period).conveyance_duty_schedule.residential.minimum_threshold,
             parameters(period).conveyance_duty_schedule.residential.rate.calc(property_price),
             0,
         )
-        # Now apply the minimum duty (if applicable)
-        conveyance_residential = numpy.maximum(conveyance_residential, parameters(period).conveyance_duty_schedule.residential.minimum_duty)
 
+        # Conditionally return `conveyance_residential` or `conveyance_commercial` where applicable
         return numpy.select(
             [is_residential_or_rural, is_commercial], [conveyance_residential, conveyance_commercial]
         )

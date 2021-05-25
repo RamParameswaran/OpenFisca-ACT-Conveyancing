@@ -1,14 +1,6 @@
 # Test files describe situations and their expected outcomes
 # We can run this test on our command line using `openfisca-run-test conveyance_duty.yaml`
 
-- name: Conveyance duty before 2017_06_07 if zero. !! Note this is just for demonstration's sake!
-  relative_error_margin: 0.0005
-  period: 2017-01-01
-  input:
-    land_use_type: [rural, residential, commercial]
-  output:
-    conveyance_duty: [0,0,0]
-
 - name: Commercial conveyance duty for period 2017-06-07 to 2018-06-06
   relative_error_margin: 0.0005
   period: 2017-06-07
@@ -16,10 +8,10 @@
     land_use_type: [commercial, commercial, commercial, commercial, commercial, commercial]
     property_price: [100, 200000, 300000, 500000, 750000, 1000000]
   output:
-    conveyance_duty: [20, 1400, 2600, 6400, 12375, 20250]
+    conveyance_duty: [0.7, 1400, 2600, 6400, 12375, 20250]
 
 - name: Commercial conveyance duty for period 2018-06-06 onwards  
-  relative_error_margin: 0.0005
+  relative_error_margin: 0.001
   period: 2018-06-07
   input:
     land_use_type: [commercial, commercial, commercial, commercial, commercial, commercial, commercial]
@@ -28,13 +20,13 @@
     conveyance_duty: [0, 0, 0, 0 ,0 ,0 , 75000.05]
 
 - name: Residential conveyance duty for period 2017-06-07 to 2018-06-06  
-  relative_error_margin: 0.0005
+  relative_error_margin: 0.001
   period: 2017-06-07
   input:
     land_use_type: [residential, residential, residential, residential, residential, residential, residential, residential]
     property_price: [100, 200000, 300000, 500000, 750000, 1000000, 1500000, 2000000]
   output:
-    conveyance_duty: [20, 2800, 5200, 12800, 24750, 40500, 73650, 98200]
+    conveyance_duty: [1.4, 2800, 5200, 12800, 24750, 40500, 73650, 98200]
 
 - name: Residential conveyance duty for period 2017-06-07 to 2018-06-06  
   relative_error_margin: 0.0005
@@ -43,7 +35,7 @@
     land_use_type: [residential, residential, residential, residential, residential, residential, residential, residential, residential, residential]
     property_price: [100, 200000, 300000, 500000, 750000, 1000000, 1454999, 1455000, 2000000, 3000000]
   output:
-    conveyance_duty: [20, 2800, 5200, 12800, 24750, 40500, 71439.932, 71440.5, 98200, 147300]
+    conveyance_duty: [1.4, 2800, 5200, 12800, 24750, 40500, 71439.932, 71440.5, 98200, 147300]
 
 - name: Residential conveyance duty for period 2018-06-07 to 2019-06-30  
   relative_error_margin: 0.001
@@ -52,7 +44,7 @@
     land_use_type: [residential, residential, residential, residential, residential, residential, residential, residential, residential, residential]
     property_price: [100, 200000, 300000, 500000, 750000, 1000000, 1454999, 1455000, 2000000, 3000000]
   output:
-    conveyance_duty: [20, 2600, 4900, 12100, 23500, 38750, 68779.934, 68821.5, 94600, 141900]
+    conveyance_duty: [1.3, 2600, 4900, 12100, 23500, 38750, 68779.934, 68821.5, 94600, 141900]
 
 - name: Residential conveyance duty for period 2018-06-07 to 2019-06-30  
   relative_error_margin: 0.001
@@ -61,13 +53,13 @@
     land_use_type: [residential, residential, residential, residential, residential, residential, residential, residential, residential, residential]
     property_price: [100, 200000, 300000, 500000, 750000, 1000000, 1454999, 1455000, 2000000, 3000000]
   output:
-    conveyance_duty: [20, 2600, 4900, 12100, 23500, 38750, 68779.934, 68821.5, 94600, 141900]
+    conveyance_duty: [1.3, 2600, 4900, 12100, 23500, 38750, 68779.934, 68821.5, 94600, 141900]
 
 - name: Residential conveyance duty for period 2019-07-01 onwards
-  relative_error_margin: 0.0005
+  relative_error_margin: 0.001
   period: 2019-07-01
   input:
     land_use_type: [residential, residential, residential, residential, residential, residential, residential, residential, residential, residential]
     property_price: [100, 200000, 300000, 500000, 750000, 1000000, 1454999, 1455000, 2000000, 3000000]
   output:
-    conveyance_duty: [20, 2400, 4600, 11400, 22200, 36950, 66069.936, 66057, 90800, 136200]
+    conveyance_duty: [1.2, 2400, 4600, 11400, 22200, 36950, 66069.936, 66057, 90800, 136200]

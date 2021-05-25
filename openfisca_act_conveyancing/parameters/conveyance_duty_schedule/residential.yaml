@@ -5,15 +5,6 @@ minimum_threshold:
   values:
     2017-06-07: 0
 
-
-minimum_duty:
-  description: Minimal amount for residential conveyance duty
-  metadata:
-    unit: currency-AUD
-  values:
-    2017-06-07: 20
-
-
 rate:
   description: Residential conveyance duty schedule
   metadata:
