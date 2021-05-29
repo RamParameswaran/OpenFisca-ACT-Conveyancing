@@ -364,9 +364,16 @@ const ActiveStepContent = (props) => {
             >
               Conveyance duty (after concession): ${openFiscaState.conveyance_duty_under_HBCS}
             </Typography>
-            {!openFiscaState.eligible_for_home_buyer_concession && (
+            {openFiscaState.eligible_for_home_buyer_concession ? (
+              <Alert severity="info">
+                Based on the information provided,{' '}
+                <span style={{ fontWeight: 600 }}>you are eligible</span> for the Home Buyer
+                Concession Scheme!
+              </Alert>
+            ) : (
               <Alert severity="warning">
-                Based on the information provided, you are not eligible for the Home Buyer
+                Based on the information provided,{' '}
+                <span style={{ fontWeight: 600 }}>you are not eligible</span> for the Home Buyer
                 Concession Scheme!
               </Alert>
             )}
