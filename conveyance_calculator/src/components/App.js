@@ -106,7 +106,7 @@ const ActiveStepContent = (props) => {
       return (
         <div>
           <Typography variant="h5" align="center" gutterBottom>
-            Conveyance Duty Calculator
+            Stamp Duty Calculator
           </Typography>
           <FormControl className={classes.formControl}>
             <TextField
