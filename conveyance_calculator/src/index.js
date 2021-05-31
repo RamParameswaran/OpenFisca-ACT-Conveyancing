@@ -21,7 +21,7 @@ ReactDOM.render(
             }}
           />
           <Tab
-            label="Population simulator"
+            label="Stamp Duty Simulator"
             onClick={(e) => {
               window.location.assign('/simulate');
             }}

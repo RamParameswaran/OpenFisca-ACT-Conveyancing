@@ -350,7 +350,7 @@ const ActiveStepContent = (props) => {
 
           <FormControl className={classes.formControl}>
             <Typography variant="h6" gutterBottom>
-              Conveyance duty payable: ${openFiscaState.conveyance_duty}
+              Stamp duty payable: ${openFiscaState.conveyance_duty}
             </Typography>
             <Typography
               variant="h6"
@@ -362,7 +362,7 @@ const ActiveStepContent = (props) => {
                     }
               }
             >
-              Conveyance duty (after concession): ${openFiscaState.conveyance_duty_under_HBCS}
+              Stamp duty payable (with HBCS): ${openFiscaState.conveyance_duty_under_HBCS}
             </Typography>
             {openFiscaState.eligible_for_home_buyer_concession ? (
               <Alert severity="info">
@@ -424,7 +424,7 @@ function App() {
 
   // STEPPER
   const [activeStep, setActiveStep] = useState(0);
-  const steps = ['Calculate conveyance duty payable', 'Are you eligible for HBCS?', 'See results'];
+  const steps = ['Calculate stamp duty payable', 'Are you eligible for HBCS?', 'See results'];
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };

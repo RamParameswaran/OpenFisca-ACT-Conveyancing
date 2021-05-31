@@ -1,35 +1,16 @@
-import { Fragment, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 import OpenFiscaApi from '../api/openfisca_api';
 
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
-import moment from 'moment';
 import { FormControl, Slider, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Alert from '@material-ui/lab/Alert';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: 50,
-  },
-  card: {
-    minWidth: 575,
-  },
-
-  actionsContainer: {
-    marginBottom: theme.spacing(2),
-    textAlign: 'center',
-  },
-  button: {
-    marginTop: theme.spacing(1),
-    marginRight: theme.spacing(1),
-    width: '40%',
-  },
-
-  resetContainer: {
-    padding: theme.spacing(3),
   },
   formControl: {
     display: 'block',
@@ -37,17 +18,10 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: 20,
     paddingBottom: 20,
   },
-  input: {
-    width: '100%',
-  },
-  toggleSwitch: {
-    marginTop: 15,
-    marginBottom: 15,
-  },
 }));
 
 const priceArray = [
-  [Date.UTC(2017, 5, 1), 1],
+  [Date.UTC(2017, 5, 7), 1],
   [Date.UTC(2017, 8, 1), 1],
   [Date.UTC(2017, 11, 1), 1],
   [Date.UTC(2018, 2, 1), 1],
